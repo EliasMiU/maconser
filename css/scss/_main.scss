@@ -1,3 +1,8 @@
+h1, h2, h3, h4 {
+  font-family: fantasy;
+}
+
+
 header {
   background-color: #000;
   color: aliceblue;
@@ -46,7 +51,7 @@ body {
     width: 35rem;
     z-index: 20;
     position: absolute;
-    right: 10%;
+    right: 3%;
   }
 }
 
@@ -90,9 +95,17 @@ ul {
 
 .menu-main {
   display: flex;
-  gap: 1rem;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  max-width: 90%;
 
   li {
+    border: 0.1rem solid;
+    padding: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-radius: 0.5rem;
+
     a {
       color: #e5e1e1;
       text-decoration: none;
@@ -107,6 +120,11 @@ ul {
     border-radius: 1rem;
     color: #fff;
     text-decoration: none;
+    
+    &:hover {
+      top: -0.1rem;
+      transition: all .5s ease-in;
+    }
 }
 
 .envio_rapido {
@@ -208,7 +226,6 @@ ul {
 .metho_entrega {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  height: 30vh;
 
   h2 {
     text-align: center;
@@ -232,6 +249,72 @@ ul {
     border: 0.2rem solid crimson;
     padding: 1rem;
     border-radius: 1rem;
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+
+    h3 {
+      font-size: 1.8rem;
+      position: relative;
+      z-index: 30;
+      width: 75%;
+    }
+
+    &::after {
+      content: '';
+      background-image: url("../img/fondo-method.jpg");
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 20;
+      width: 100%;
+      height: 100%;
+      -webkit-clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 41% 100%);
+      clip-path: polygon(83% 0%, 100% 0%, 100% 100%, 76% 91%, 69% 72%);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 0 0.8rem 0.8rem 0;
+    }
   }
 
+}
+.producto_main {
+  padding-bottom: 3rem;
+  background-color: crimson;
+
+  img {
+    width: 30rem;
+  }
+}
+
+.content_producto_main {
+  min-height: 40vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  color: #e5e1e1;
+
+  h2 {
+    font-size: 5rem;
+    line-height: 4.8rem;
+    width: 65%;
+    margin-bottom: 2rem;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.6rem 3rem;
+    background-color: #000;
+    text-decoration: none;
+    color: #fff;
+    font-family: fantasy;
+    border-radius: 0.2rem;
+    font-size: 1.4rem;
+  }
+}
+
+footer {
+  background-color: rgba(3, 3, 3, 1);
+  color: #fff;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }
